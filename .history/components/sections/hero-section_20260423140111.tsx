@@ -9,11 +9,8 @@ import {
 	FiUsers,
 } from "react-icons/fi";
 import { HiOutlineTicket } from "react-icons/hi2";
-import { getNextArgentinoMatch } from "@/lib/apifootball";
 
-export async function HeroSection() {
-	const nextMatch = await getNextArgentinoMatch();
-
+export function HeroSection() {
 	return (
 		<section
 			id="inicio"
@@ -37,7 +34,7 @@ export async function HeroSection() {
 				className="pointer-events-none absolute bottom-0 left-0 right-0 h-36 bg-[linear-gradient(to_bottom,transparent_0%,rgba(3,8,20,0.9)_100%)]"
 				aria-hidden
 			/>
-<div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,transparent_30%,rgba(255,255,255,0.08)_50%,transparent_70%)] animate-shimmer" />
+
 			<div className="relative z-[2] mx-auto grid w-full max-w-[1300px] flex-1 grid-cols-1 items-end gap-10 px-6 pb-10 pt-36 sm:px-10 sm:pt-40 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-14 lg:px-16 lg:pt-44 xl:px-20">
 				<div className="max-w-[700px]">
 					<p className="font-heading animate-fade-up mb-4 inline-flex items-center rounded-md border border-white/30 bg-black/35 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white shadow-[0_6px_18px_rgba(0,0,0,0.3)] backdrop-blur-[1px] sm:text-[0.72rem]">
@@ -108,21 +105,21 @@ animate-float-card"
 							</div>
 						</div>
 						<div className="font-display mb-1 grid grid-cols-2 gap-3 text-[1.25rem] tracking-[0.04em]">
-							<span>{nextMatch.homeTeam}</span>
-							<span>{nextMatch.awayTeam}</span>
+							<span>Argentino</span>
+							<span>Deportivo M.</span>
 						</div>
 						<div className="mt-4 space-y-2 rounded-lg border border-white/10 bg-black/25 px-3 py-3 text-left">
 							<p className="flex items-center gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-zinc-200">
 								<FiCalendar className="h-3.5 w-3.5 text-celeste" aria-hidden />
-								{nextMatch.date}
+								Sáb 26 Abr
 							</p>
 							<p className="flex items-center gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-zinc-200">
 								<FiClock className="h-3.5 w-3.5 text-celeste" aria-hidden />
-								{nextMatch.time}
+								15:30 hs
 							</p>
 							<p className="flex items-center gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-zinc-200">
 								<FiMapPin className="h-3.5 w-3.5 text-celeste" aria-hidden />
-								{nextMatch.stadium}
+								Estadio Merlo Norte
 							</p>
 						</div>
 						<Link
