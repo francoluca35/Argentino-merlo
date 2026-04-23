@@ -5,7 +5,7 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { InferioresSection } from "@/components/sections/inferiores-section";
 import { NewsSection } from "@/components/sections/news-section";
 import { SiteFooter } from "@/components/sections/site-footer";
-import { SponsorsSection } from "@/components/sections/SponsorSection";
+import { SponsorSection } from "@/components/sections/SponsorSection";
 import { StoreSection } from "@/components/sections/store-section";
 
 export default function HomePage() {

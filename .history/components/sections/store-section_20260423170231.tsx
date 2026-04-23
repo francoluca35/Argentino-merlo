@@ -8,7 +8,7 @@ import { LuFeather, LuLock, LuMedal, LuShieldCheck, LuWind } from "react-icons/l
 const products = [
 	{
 		name: "Camiseta Titular",
-		season: "2025/26",
+		season: "2024/25",
 		price: "$18.500",
 		badge: "Nuevo",
 		desc: "Diseño oficial utilizado por el plantel. Confeccionada con tecnología de alto rendimiento para máxima comodidad.",
@@ -18,31 +18,54 @@ const products = [
 			<LuFeather key="feather" className="h-5 w-5" />,
 			<LuShieldCheck key="shield" className="h-5 w-5" />,
 		],
-		img: "/Assets/titular.png",
+		img: "/tienda/camiseta-titular.png",
 		thumbs: [
 			"/Assets/titular.png",
-		
+			"/tienda/camiseta-alternativa.png",
+			"/tienda/short.png",
+			"/tienda/gorra.png",
 		],
 	},
 	{
 		name: "Camiseta Alternativa",
-		season: "2025/26",
-		price: "$16.500",
+		season: "2024/25",
+		price: "$18.500",
 		badge: "Nuevo",
-		desc: "La camiseta alternativa de la academia. Edición limitada con detalles exclusivos y materiales premium.",
+		desc: "La camiseta alternativa del Charro. Edición limitada con detalles exclusivos y materiales premium.",
 		features: ["Respirable", "Liviana", "Escudo Bordado"],
 		featureIcons: [
 			<LuWind key="wind" className="h-5 w-5" />,
 			<LuFeather key="feather" className="h-5 w-5" />,
 			<LuShieldCheck key="shield" className="h-5 w-5" />,
 		],
-		img: "/Assets/alt.png",
+		img: "/tienda/camiseta-alternativa.png",
 		thumbs: [
-			"/Assets/alt.png",
-		
+			"/tienda/camiseta-alternativa.png",
+			"/tienda/camiseta-titular.png",
+			"/tienda/short.png",
+			"/tienda/gorra.png",
 		],
 	},
-	
+	{
+		name: "Short Oficial",
+		season: "2024/25",
+		price: "$9.500",
+		badge: "Stock",
+		desc: "Short oficial del plantel. Liviano y cómodo para entrenar o alentar al Charro desde las tribunas.",
+		features: ["Respirable", "Liviano", "Elástico"],
+		featureIcons: [
+			<LuWind key="wind" className="h-5 w-5" />,
+			<LuFeather key="feather" className="h-5 w-5" />,
+			<LuShieldCheck key="shield" className="h-5 w-5" />,
+		],
+		img: "/tienda/short.png",
+		thumbs: [
+			"/tienda/short.png",
+			"/tienda/camiseta-titular.png",
+			"/tienda/camiseta-alternativa.png",
+			"/tienda/gorra.png",
+		],
+	},
 ];
 
 const sizes = ["S", "M", "L", "XL", "XXL"];

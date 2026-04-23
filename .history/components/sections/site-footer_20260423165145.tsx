@@ -25,7 +25,8 @@ export function Footer() {
 						</h4>
 						<ul className="space-y-3.5 text-[0.95rem] text-[#3f5977]">
 							<li className="flex items-center gap-2.5">
-								<FiMapPin className="text-[#7a8fa8]" /> Antezana 3330, Merlo, Buenos Aires, Argentina
+								<FiMapPin className="text-[#7a8fa8]" /> Avenida Hipólito Yrigoyen
+								1770, Morón.
 							</li>
 							<li className="flex items-center gap-2.5">
 								<FiClock className="text-[#7a8fa8]" /> Lunes a viernes de 9 a 21
@@ -35,10 +36,10 @@ export function Footer() {
 								<FiClock className="text-[#7a8fa8]" /> Sábados de 9 a 13 Hs.
 							</li>
 							<li className="flex items-center gap-2.5">
-								<FiAtSign className="text-[#7a8fa8]" /> socios@argentinodemerlo.com.ar
+								<FiAtSign className="text-[#7a8fa8]" /> socios@deportivomoron.com.ar
 							</li>
 							<li className="flex items-center gap-2.5">
-								<FiPhone className="text-[#7a8fa8]" /> (11) 0101-0101
+								<FiPhone className="text-[#7a8fa8]" /> (11) 4043-7208
 							</li>
 						</ul>
 					</div>
@@ -77,7 +78,7 @@ export function Footer() {
 					</div>
 
 					<div className="flex items-start lg:justify-end">
-						<div className="flex items-center gap-4 rounded-xl px-5 py-5 ">
+						<div className="flex items-center gap-4 rounded-xl border border-[#d8e2ed] bg-white px-5 py-5 shadow-[0_10px_26px_rgba(10,35,64,0.12)]">
 							<Image
 								src="/logo-oficial.png"
 								alt="Club Atlético Argentino de Merlo"
