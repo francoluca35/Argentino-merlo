@@ -1,3 +1,4 @@
+import { NavPageAnchors } from "@/components/nav-page-anchors";
 import { SiteNav } from "@/components/site-nav";
 import { CalendarSection } from "@/components/sections/calendar-section";
 import { HeroSection } from "@/components/sections/hero-section";
@@ -20,6 +21,7 @@ export default function HomePage() {
 				<CalendarSection />
 				<SquadSection />
 				<StoreSection />
+				<NavPageAnchors />
 			</main>
 			<SiteFooter />
 		</>

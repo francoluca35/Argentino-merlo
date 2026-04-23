@@ -22,7 +22,7 @@ export function HeroSection() {
 				aria-hidden
 			/>
 
-			<div className="relative z-[2] grid w-full grid-cols-1 items-end gap-8 px-8 pb-12 pt-28 md:grid-cols-2 md:gap-12 lg:px-20 lg:pb-20">
+			<div className="relative z-[2] grid w-full grid-cols-1 items-end gap-8 px-8 pb-12 pt-24 sm:pt-28 md:grid-cols-2 md:gap-12 md:pt-44 lg:px-20 lg:pb-20">
 				<div className="max-w-xl">
 					<p className="font-heading animate-fade-up mb-5 inline-block rounded-sm border border-celeste px-3 py-1 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-celeste">
 						<span aria-hidden>⚽ </span>

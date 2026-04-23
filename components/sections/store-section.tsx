@@ -7,7 +7,7 @@ export function StoreSection() {
 		<section
 			id="tienda"
 			aria-labelledby="tienda-heading"
-			className="relative scroll-mt-[72px] overflow-hidden bg-[linear-gradient(135deg,#041928_0%,#0a1628_50%,#071f35_100%)] px-8 py-16 md:px-12 lg:px-20 lg:py-24"
+			className="relative scroll-mt-[120px] overflow-hidden bg-[linear-gradient(135deg,#041928_0%,#0a1628_50%,#071f35_100%)] px-8 py-16 md:px-12 lg:px-20 lg:py-24"
 		>
 			<div
 				className="pointer-events-none absolute -right-[20%] top-[-50%] h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle,rgba(0,174,239,0.12)_0%,transparent_70%)]"

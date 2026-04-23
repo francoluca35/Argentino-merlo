@@ -52,10 +52,10 @@ function mobileNavLink(
 	const motion =
 		"origin-center font-heading whitespace-nowrap no-underline transition-[color,background-color,transform] duration-200 ease-out will-change-transform hover:-translate-y-0.5 hover:scale-[1.02] motion-reduce:hover:translate-y-0 motion-reduce:hover:scale-100";
 	if (variant === "cta") {
-		return `${motion} ${sz} rounded-lg px-2 py-1.5 -mx-2 ${
+		return `${motion} ${sz} rounded-lg px-2 py-1.5 -mx-2 text-celeste-30 ${
 			active
-				? "bg-celeste/15 text-celeste-dark underline decoration-2 underline-offset-2 decoration-celeste"
-				: "text-celeste-dark hover:bg-celeste/15 hover:text-zinc-900"
+				? "bg-celeste/15 text-zinc-900 underline decoration-2 underline-offset-2 decoration-celeste"
+				: "text-zinc-900 hover:bg-celeste/15 hover:text-celeste-dark"
 		}`;
 	}
 	return `${motion} ${sz} rounded-lg px-2 py-1 -mx-2 ${
@@ -179,7 +179,7 @@ export function SiteNav() {
 		<header className="fixed inset-x-0 top-0 z-100">
 			<div className="pointer-events-none md:hidden">
 				<div className="relative z-[110] pointer-events-auto w-full pt-[env(safe-area-inset-top,0px)]">
-					<div className="flex h-14 w-full min-w-0 items-center gap-2 bg-celeste px-3 shadow-[0_8px_24px_rgba(0,0,0,0.2)] sm:gap-3 sm:px-4">
+					<div className="flex h-14 w-full min-w-0 items-center justify-between gap-3 bg-celeste px-3 shadow-[0_8px_24px_rgba(0,0,0,0.2)] sm:px-4">
 						<Link
 							href="#inicio"
 							className="flex h-11 w-11 shrink-0 items-center justify-center sm:h-12 sm:w-12"
@@ -196,11 +196,8 @@ export function SiteNav() {
 								sizes="48px"
 							/>
 						</Link>
-						<span className="font-heading min-w-0 truncate pl-1 text-left text-[0.95rem] font-bold uppercase tracking-[0.06em] text-zinc-900 sm:text-[1.02rem]">
-							Argentino de Merlo
-						</span>
 
-						<nav className="ml-auto flex shrink-0 items-center" aria-label="Principal móvil">
+						<nav className="flex shrink-0 items-center" aria-label="Principal móvil">
 							<button
 								type="button"
 								className="flex min-h-11 min-w-11 items-center justify-center rounded-lg text-club-dark transition-colors hover:bg-black/10 active:bg-black/15 sm:min-h-12 sm:min-w-12"
@@ -231,7 +228,7 @@ export function SiteNav() {
 						/>
 						<div
 							id="mobile-nav-panel"
-							className="pointer-events-auto fixed left-0 right-0 top-[calc(env(safe-area-inset-top,0px)+3.5rem)] z-[105] flex max-h-[min(58vh,calc(100dvh-env(safe-area-inset-top,0px)-3.5rem-1.5rem))] flex-col overflow-hidden border-x border-b border-zinc-200/90 bg-white shadow-[0_16px_40px_rgba(0,0,0,0.18)] sm:left-4 sm:right-4"
+							className="pointer-events-auto fixed left-0 right-0 top-[calc(env(safe-area-inset-top,0px)+3.5rem)] z-[105] flex max-h-[min(58vh,calc(100dvh-env(safe-area-inset-top,0px)-3.5rem-1.5rem))] flex-col overflow-hidden rounded-b-2xl border-x border-b border-zinc-200/90 bg-white shadow-[0_16px_40px_rgba(0,0,0,0.18)] sm:left-4 sm:right-4 sm:rounded-b-2xl"
 							role="dialog"
 							aria-modal="true"
 							aria-label="Enlaces de navegación"

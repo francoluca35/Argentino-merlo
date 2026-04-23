@@ -5,7 +5,7 @@ export function InferioresSection() {
 		<section
 			id="inferiores"
 			aria-labelledby="inferiores-heading"
-			className="scroll-mt-[72px] border-y border-celeste/10 bg-club-dark px-8 py-14 md:px-12 lg:px-20"
+			className="scroll-mt-[120px] border-y border-celeste/10 bg-club-dark px-8 py-14 md:px-12 lg:px-20"
 		>
 			<Reveal className="mx-auto max-w-3xl text-center">
 				<p className="font-heading mb-2 text-[0.75rem] font-bold uppercase tracking-[0.22em] text-celeste">
