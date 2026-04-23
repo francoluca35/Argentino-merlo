@@ -6,6 +6,7 @@ import { InferioresSection } from "@/components/sections/inferiores-section";
 import { NewsSection } from "@/components/sections/news-section";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SquadSection } from "@/components/sections/squad-section";
+
 import { StoreSection } from "@/components/sections/store-section";
 
 export default function HomePage() {
