@@ -7,16 +7,6 @@ export function NewsSection() {
 	const [featured, ...rest] = newsItems;
 	const tabs = ["Todas", "Fútbol", "Institucional", "Inferiores", "Prensa"];
 	const latestItems = [featured, ...rest].slice(0, 3).filter(Boolean);
-	const dottedCircleStyle = {
-		backgroundImage:
-			"radial-gradient(circle, rgba(0,174,239,0.5) 1.2px, transparent 1.35px)",
-		backgroundSize: "10px 10px",
-		backgroundPosition: "0 0",
-		maskImage:
-			"radial-gradient(circle, rgba(0,0,0,1) 26%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.38) 64%, rgba(0,0,0,0) 78%)",
-		WebkitMaskImage:
-			"radial-gradient(circle, rgba(0,0,0,1) 26%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.38) 64%, rgba(0,0,0,0) 78%)",
-	} as const;
 	const moreNews = [
 		{
 			id: "more-1",
@@ -57,20 +47,22 @@ export function NewsSection() {
 
 	return (
 		<section
-			id="noticias"
-			aria-labelledby="noticias-heading"
-			className="relative overflow-hidden scroll-mt-[120px] bg-[#eff2f6] px-6 py-14 text-[#0a2b54] md:px-10 lg:px-16 lg:py-18"
-		>
-			<div
-				aria-hidden
-				className="pointer-events-none absolute -left-24 top-14 hidden h-[280px] w-[280px] rounded-full md:block"
-				style={dottedCircleStyle}
-			/>
-			<div
-				aria-hidden
-				className="pointer-events-none absolute -bottom-20 -right-20 hidden h-[260px] w-[260px] rounded-full md:block"
-				style={dottedCircleStyle}
-			/>
+	id="noticias"
+	aria-labelledby="noticias-heading"
+	className="relative overflow-hidden scroll-mt-[120px] bg-[#eff2f6] px-6 py-14 text-[#0a2b54] md:px-10 lg:px-16 lg:py-18"
+>
+	{/* 🔥 DECORACIÓN TOP */}
+	<div className="pointer-events-none absolute top-0 left-0 w-full h-[220px] 
+		bg-[url('/noticias.png')]  bg-cover opacity-90" 
+	/>
+
+	<div className="pointer-events-none absolute inset-0 
+		bg-[linear-gradient(to_bottom,rgba(0,170,220,0.12),transparent_60%)]" 
+	/>
+
+	<div className="pointer-events-none absolute top-0 left-0 w-full h-[180px] 
+		bg-[radial-gradient(circle_at_top_left,rgba(0,170,220,0.22),transparent_60%)]" 
+	/>
 			<div className="mx-auto w-full max-w-[1240px]">
 				<Reveal>
 					<p className="font-heading mb-1 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-celeste">
@@ -127,7 +119,7 @@ export function NewsSection() {
 											Triunfo en casa: Argentino ganó 2-0 y sigue en lo más alto
 										</h3>
 										<p className="mt-3 max-w-[640px] text-[1rem] leading-relaxed text-[#d7e8ff]">
-											Con goles de López y Martínez, la Academia se impuso en
+											Con goles de López y Martínez, el Charro se impuso en
 											Merlo Norte y estira su racha positiva en el torneo.
 										</p>
 										<div className="mt-5 flex flex-wrap items-center gap-4">
