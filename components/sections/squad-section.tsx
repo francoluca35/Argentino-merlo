@@ -1,4 +1,3 @@
-import { PlayerSilhouette } from "@/components/player-silhouette";
 import { Reveal } from "@/components/reveal";
 import { playerItems } from "@/lib/site-data";
 
@@ -27,13 +26,16 @@ export function SquadSection() {
 						<Reveal>
 							<article className="relative cursor-pointer overflow-hidden rounded-lg bg-club-gray transition-transform hover:-translate-y-1">
 								<div className="relative w-full pb-[120%] bg-[linear-gradient(135deg,#0a1628_0%,#0d2240_100%)]">
+									<img
+										src={player.imageSrc}
+										alt={player.imageAlt}
+										className="absolute inset-0 h-full w-full object-cover"
+										loading="lazy"
+									/>
 									<div
 										className="pointer-events-none absolute inset-x-0 bottom-0 h-[60%] bg-[linear-gradient(to_top,rgba(10,10,10,0.95),transparent)]"
 										aria-hidden
 									/>
-									<div className="absolute inset-0 flex items-end justify-center pb-10">
-										<PlayerSilhouette className="w-20 opacity-30" />
-									</div>
 									<p
 										className="font-display absolute left-3 top-3 text-[1.75rem] leading-none text-celeste/50"
 										aria-label={`Camiseta número ${player.number}`}

@@ -38,7 +38,7 @@ export async function HeroSection() {
 				aria-hidden
 			/>
 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,transparent_30%,rgba(255,255,255,0.08)_50%,transparent_70%)] animate-shimmer" />
-			<div className="relative z-[2] mx-auto grid w-full max-w-[1300px] flex-1 grid-cols-1 items-end gap-10 px-6 pb-10 pt-36 sm:px-10 sm:pt-40 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-14 lg:px-16 lg:pt-44 xl:px-20">
+			<div className="relative z-[2] mx-auto grid w-full max-w-[1300px] flex-1 grid-cols-1 items-start gap-10 px-6 pb-10 pt-24 sm:px-10 sm:pt-32 md:items-end lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-14 lg:px-16 lg:pt-44 xl:px-20">
 				<div className="max-w-[700px]">
 					<p className="font-heading animate-fade-up mb-4 inline-flex items-center rounded-md border border-white/30 bg-black/35 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white shadow-[0_6px_18px_rgba(0,0,0,0.3)] backdrop-blur-[1px] sm:text-[0.72rem]">
 						<span aria-hidden>⚽ </span>

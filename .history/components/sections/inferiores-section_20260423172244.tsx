@@ -146,7 +146,7 @@ export function InferioresSection() {
 					>
 						Argentino <span className="text-[#00AEEF]">de Merlo</span>
 					</h2>
-					<div className="mx-auto mb-5 mt-4 h-[3px] w-12 rounded-full bg-[#00c0f0]" />
+					<div className="mx-auto mb-5 mt-4 h-[3px] w-12 rounded-full bg-[#f0a500]" />
 					<p className="text-[1rem] font-medium text-[#d4e2f3]">
 						Un equipo, una pasión. Representamos a todo Merlo.
 					</p>
@@ -206,7 +206,6 @@ function PlayerCard({ player }: { player: (typeof players)[0] }) {
 					src={player.img}
 					alt={`${player.firstName} ${player.lastName}`}
 					fill
-					unoptimized
 					className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
 					sizes="(max-width: 1300px) 20vw, 240px"
 				/>

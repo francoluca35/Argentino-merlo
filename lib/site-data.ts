@@ -23,6 +23,8 @@ export type PlayerItem = {
 	number: string;
 	position: string;
 	name: string;
+	imageSrc: string;
+	imageAlt: string;
 };
 
 export type ProductItem = {
@@ -121,16 +123,86 @@ export const matchItems: MatchItem[] = [
 ];
 
 export const playerItems: PlayerItem[] = [
-	{ id: "p1", number: "1", position: "Arquero", name: "Rodrigo Gómez" },
-	{ id: "p2", number: "4", position: "Defensor", name: "Lucas Peralta" },
-	{ id: "p3", number: "5", position: "Defensor", name: "Maximiliano Ríos" },
-	{ id: "p4", number: "8", position: "Mediocampista", name: "Ezequiel Torres" },
-	{ id: "p5", number: "10", position: "Mediocampista", name: "Nicolás Vera" },
-	{ id: "p6", number: "7", position: "Delantero", name: "Facundo López" },
-	{ id: "p7", number: "9", position: "Delantero", name: "Agustín Morel" },
-	{ id: "p8", number: "3", position: "Defensor", name: "Braian Suárez" },
-	{ id: "p9", number: "6", position: "Defensor", name: "Diego Almada" },
-	{ id: "p10", number: "11", position: "Delantero", name: "Sebastián Núñez" },
+	{
+		id: "p1",
+		number: "1",
+		position: "Arquero",
+		name: "Rodrigo Gómez",
+		imageSrc: "https://placehold.co/700x1000/0d2240/00AEEF?text=Jugador+de+Futbol+1",
+		imageAlt: "Jugador de fútbol 1",
+	},
+	{
+		id: "p2",
+		number: "4",
+		position: "Defensor",
+		name: "Lucas Peralta",
+		imageSrc: "https://placehold.co/700x1000/0d2240/00AEEF?text=Jugador+de+Futbol+2",
+		imageAlt: "Jugador de fútbol 2",
+	},
+	{
+		id: "p3",
+		number: "5",
+		position: "Defensor",
+		name: "Maximiliano Ríos",
+		imageSrc: "https://placehold.co/700x1000/0d2240/00AEEF?text=Jugador+de+Futbol+3",
+		imageAlt: "Jugador de fútbol 3",
+	},
+	{
+		id: "p4",
+		number: "8",
+		position: "Mediocampista",
+		name: "Ezequiel Torres",
+		imageSrc: "https://placehold.co/700x1000/0d2240/00AEEF?text=Jugador+de+Futbol+4",
+		imageAlt: "Jugador de fútbol 4",
+	},
+	{
+		id: "p5",
+		number: "10",
+		position: "Mediocampista",
+		name: "Nicolás Vera",
+		imageSrc: "https://placehold.co/700x1000/0d2240/00AEEF?text=Jugador+de+Futbol+5",
+		imageAlt: "Jugador de fútbol 5",
+	},
+	{
+		id: "p6",
+		number: "7",
+		position: "Delantero",
+		name: "Facundo López",
+		imageSrc: "https://placehold.co/700x1000/0d2240/00AEEF?text=Jugador+de+Futbol+6",
+		imageAlt: "Jugador de fútbol 6",
+	},
+	{
+		id: "p7",
+		number: "9",
+		position: "Delantero",
+		name: "Agustín Morel",
+		imageSrc: "https://placehold.co/700x1000/0d2240/00AEEF?text=Jugador+de+Futbol+7",
+		imageAlt: "Jugador de fútbol 7",
+	},
+	{
+		id: "p8",
+		number: "3",
+		position: "Defensor",
+		name: "Braian Suárez",
+		imageSrc: "https://placehold.co/700x1000/0d2240/00AEEF?text=Jugador+de+Futbol+8",
+		imageAlt: "Jugador de fútbol 8",
+	},
+	{
+		id: "p9",
+		number: "6",
+		position: "Defensor",
+		name: "Diego Almada",
+		imageSrc: "https://placehold.co/700x1000/0d2240/00AEEF?text=Jugador+de+Futbol+9",
+		imageAlt: "Jugador de fútbol 9",
+	},
+	{
+		id: "p10",
+		number: "11",
+		position: "Delantero",
+		name: "Sebastián Núñez",
+		imageSrc: "https://placehold.co/700x1000/0d2240/00AEEF?text=Jugador+de+Futbol+10",
+		imageAlt: "Jugador de fútbol 10",
+	},
 ];
 
 export const productItems: ProductItem[] = [

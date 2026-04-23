@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { LuTrophy, LuHandshake, LuTrendingUp } from "react-icons/lu";
 import { FiUsers } from "react-icons/fi";
@@ -65,19 +65,53 @@ const valores = [
   },
 ];
 
-const VISIBLE = 8;
+const getItemsPerPage = (width: number) => {
+	if (width < 768) return 1;
+	if (width < 1024) return 2;
+	return 8;
+};
 
 export function SponsorsSection() {
-  const [page, setPage] = useState(0);
-  const totalPages = Math.ceil(sponsors.length / VISIBLE);
-  const visible = sponsors.slice(page * VISIBLE, page * VISIBLE + VISIBLE);
+	const [page, setPage] = useState(0);
+	const [itemsPerPage, setItemsPerPage] = useState(8);
+	const totalPages = Math.ceil(sponsors.length / itemsPerPage);
+	const currentPage = Math.min(page, Math.max(totalPages - 1, 0));
+	const visible = sponsors.slice(
+		currentPage * itemsPerPage,
+		currentPage * itemsPerPage + itemsPerPage
+	);
 
-  return (
-    <section
-      id="sponsors"
-      aria-labelledby="sponsors-title"
-      className="relative overflow-hidden bg-white"
-    >
+	useEffect(() => {
+		const updateItemsPerPage = () => {
+			setItemsPerPage(getItemsPerPage(window.innerWidth));
+		};
+
+		updateItemsPerPage();
+		window.addEventListener("resize", updateItemsPerPage);
+
+		return () => {
+			window.removeEventListener("resize", updateItemsPerPage);
+		};
+	}, []);
+
+	useEffect(() => {
+		if (itemsPerPage !== 1 || totalPages <= 1) return;
+
+		const autoPlay = window.setInterval(() => {
+			setPage((current) => (current + 1) % totalPages);
+		}, 2500);
+
+		return () => {
+			window.clearInterval(autoPlay);
+		};
+	}, [itemsPerPage, totalPages]);
+
+	return (
+		<section
+			id="sponsors"
+			aria-labelledby="sponsors-title"
+			className="relative overflow-hidden bg-white"
+		>
       {/* ── HEADER BAND ── */}
       <div className="relative overflow-hidden bg-[#f0f5fb] py-16 text-center">
         {/* Brush left */}
@@ -121,26 +155,28 @@ export function SponsorsSection() {
       </div>
 
       {/* ── SPONSORS CAROUSEL ── */}
-      <div className="relative bg-[#f0f5fb] py-10">
-        <div className="mx-auto max-w-[1300px] px-6 sm:px-10 lg:px-16">
-          <div className="relative flex items-center gap-4">
+			<div className="relative bg-[#f0f5fb] py-10">
+				<div className="mx-auto max-w-[1300px] px-6 sm:px-10 lg:px-16">
+					<div className="relative flex items-center gap-4">
             {/* Prev */}
-            <button
-              onClick={() => setPage((p) => Math.max(0, p - 1))}
-              disabled={page === 0}
-              aria-label="Sponsors anteriores"
-              className="z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d0dcea] bg-white text-[#0a1e3d] shadow-sm transition hover:border-[#00AEEF] hover:text-[#00AEEF] disabled:cursor-not-allowed disabled:opacity-30"
-            >
-              <FiChevronLeft className="h-5 w-5" />
-            </button>
+						<button
+							onClick={() => setPage((p) => Math.max(0, Math.min(p, totalPages - 1) - 1))}
+							disabled={currentPage === 0}
+							aria-label="Sponsors anteriores"
+							className="z-10 hidden h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d0dcea] bg-white text-[#0a1e3d] shadow-sm transition hover:border-[#00AEEF] hover:text-[#00AEEF] disabled:cursor-not-allowed disabled:opacity-30 sm:flex"
+						>
+							<FiChevronLeft className="h-5 w-5" />
+						</button>
 
             {/* Grid of logos */}
-            <div className="grid flex-1 grid-cols-4 gap-0 sm:grid-cols-8">
+						<div className="grid flex-1 grid-cols-1 gap-0 md:grid-cols-2 lg:grid-cols-8">
               {visible.map((sponsor, i) => (
                 <div
                   key={sponsor.name}
                   className={`flex flex-col items-center justify-center border-r border-[#e8eef6] px-4 py-6 last:border-r-0 ${
-                    i >= 4 ? "border-t border-[#e8eef6] sm:border-t-0" : ""
+                    i >= itemsPerPage / 2 && itemsPerPage > 2
+                      ? "border-t border-[#e8eef6] lg:border-t-0"
+                      : ""
                   }`}
                 >
                   <div className="relative mb-2 flex h-14 w-full items-center justify-center grayscale transition-all duration-300 hover:grayscale-0">
@@ -170,35 +206,37 @@ export function SponsorsSection() {
             </div>
 
             {/* Next */}
-            <button
-              onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
-              disabled={page === totalPages - 1}
-              aria-label="Sponsors siguientes"
-              className="z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d0dcea] bg-white text-[#0a1e3d] shadow-sm transition hover:border-[#00AEEF] hover:text-[#00AEEF] disabled:cursor-not-allowed disabled:opacity-30"
-            >
-              <FiChevronRight className="h-5 w-5" />
-            </button>
-          </div>
+						<button
+							onClick={() =>
+								setPage((p) => Math.min(totalPages - 1, Math.min(p, totalPages - 1) + 1))
+							}
+							disabled={currentPage === totalPages - 1}
+							aria-label="Sponsors siguientes"
+							className="z-10 hidden h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d0dcea] bg-white text-[#0a1e3d] shadow-sm transition hover:border-[#00AEEF] hover:text-[#00AEEF] disabled:cursor-not-allowed disabled:opacity-30 sm:flex"
+						>
+							<FiChevronRight className="h-5 w-5" />
+						</button>
+					</div>
 
           {/* Dots */}
-          {totalPages > 1 && (
-            <div className="mt-7 flex justify-center gap-2">
-              {Array.from({ length: totalPages }).map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setPage(i)}
-                  aria-label={`Página ${i + 1}`}
-                  className={`h-2 rounded-full transition-all ${
-                    i === page
-                      ? "w-6 bg-[#00AEEF]"
-                      : "w-2 bg-[#00AEEF]/30 hover:bg-[#00AEEF]/60"
-                  }`}
-                />
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
+					{totalPages > 1 && (
+						<div className="mt-7 flex justify-center gap-2">
+							{Array.from({ length: totalPages }).map((_, i) => (
+								<button
+									key={i}
+									onClick={() => setPage(i)}
+									aria-label={`Página ${i + 1}`}
+									className={`h-2 rounded-full transition-all ${
+										i === currentPage
+											? "w-6 bg-[#00AEEF]"
+											: "w-2 bg-[#00AEEF]/30 hover:bg-[#00AEEF]/60"
+									}`}
+								/>
+							))}
+						</div>
+					)}
+				</div>
+			</div>
 
       {/* ── VALORES BAR ── */}
       <div className="bg-[#f0f5fb] py-12">

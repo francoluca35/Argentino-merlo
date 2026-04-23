@@ -206,7 +206,6 @@ function PlayerCard({ player }: { player: (typeof players)[0] }) {
 					src={player.img}
 					alt={`${player.firstName} ${player.lastName}`}
 					fill
-					unoptimized
 					className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
 					sizes="(max-width: 1300px) 20vw, 240px"
 				/>
