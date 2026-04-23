@@ -8,7 +8,7 @@ import { LuFeather, LuLock, LuMedal, LuShieldCheck, LuWind } from "react-icons/l
 const products = [
 	{
 		name: "Camiseta Titular",
-		season: "2025/26",
+		season: "2024/25",
 		price: "$18.500",
 		badge: "Nuevo",
 		desc: "Diseño oficial utilizado por el plantel. Confeccionada con tecnología de alto rendimiento para máxima comodidad.",
@@ -26,8 +26,8 @@ const products = [
 	},
 	{
 		name: "Camiseta Alternativa",
-		season: "2025/26",
-		price: "$16.500",
+		season: "2024/25",
+		price: "$18.500",
 		badge: "Nuevo",
 		desc: "La camiseta alternativa de la academia. Edición limitada con detalles exclusivos y materiales premium.",
 		features: ["Respirable", "Liviana", "Escudo Bordado"],

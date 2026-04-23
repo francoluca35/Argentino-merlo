@@ -151,7 +151,7 @@ export function ClubSection() {
 					<div className="flex flex-col gap-5">
 						<div className="relative overflow-hidden rounded-2xl shadow-[0_12px_40px_rgba(0,30,80,0.18)]">
 							<Image
-								src="/cancha.png"
+								src="/hero.jpg"
 								alt="Estadio Juan Carlos Brieva – Club Atlético Argentino de Merlo"
 								width={700}
 								height={400}

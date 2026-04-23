@@ -8,7 +8,7 @@ import { LuFeather, LuLock, LuMedal, LuShieldCheck, LuWind } from "react-icons/l
 const products = [
 	{
 		name: "Camiseta Titular",
-		season: "2025/26",
+		season: "2024/25",
 		price: "$18.500",
 		badge: "Nuevo",
 		desc: "Diseño oficial utilizado por el plantel. Confeccionada con tecnología de alto rendimiento para máxima comodidad.",
@@ -21,25 +21,29 @@ const products = [
 		img: "/Assets/titular.png",
 		thumbs: [
 			"/Assets/titular.png",
-		
+			"/tienda/camiseta-alternativa.png",
+			"/tienda/short.png",
+			"/tienda/gorra.png",
 		],
 	},
 	{
 		name: "Camiseta Alternativa",
-		season: "2025/26",
-		price: "$16.500",
+		season: "2024/25",
+		price: "$18.500",
 		badge: "Nuevo",
-		desc: "La camiseta alternativa de la academia. Edición limitada con detalles exclusivos y materiales premium.",
+		desc: "La camiseta alternativa del Charro. Edición limitada con detalles exclusivos y materiales premium.",
 		features: ["Respirable", "Liviana", "Escudo Bordado"],
 		featureIcons: [
 			<LuWind key="wind" className="h-5 w-5" />,
 			<LuFeather key="feather" className="h-5 w-5" />,
 			<LuShieldCheck key="shield" className="h-5 w-5" />,
 		],
-		img: "/Assets/alt.png",
+		img: "/Assets/alta.png",
 		thumbs: [
-			"/Assets/alt.png",
-		
+			"/tienda/camiseta-alternativa.png",
+			"/tienda/camiseta-titular.png",
+			"/tienda/short.png",
+			"/tienda/gorra.png",
 		],
 	},
 	

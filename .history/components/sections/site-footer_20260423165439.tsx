@@ -35,10 +35,10 @@ export function Footer() {
 								<FiClock className="text-[#7a8fa8]" /> Sábados de 9 a 13 Hs.
 							</li>
 							<li className="flex items-center gap-2.5">
-								<FiAtSign className="text-[#7a8fa8]" /> socios@argentinodemerlo.com.ar
+								<FiAtSign className="text-[#7a8fa8]" /> socios@deportivomoron.com.ar
 							</li>
 							<li className="flex items-center gap-2.5">
-								<FiPhone className="text-[#7a8fa8]" /> (11) 0101-0101
+								<FiPhone className="text-[#7a8fa8]" /> (11) 4043-7208
 							</li>
 						</ul>
 					</div>
@@ -77,7 +77,7 @@ export function Footer() {
 					</div>
 
 					<div className="flex items-start lg:justify-end">
-						<div className="flex items-center gap-4 rounded-xl px-5 py-5 ">
+						<div className="flex items-center gap-4 rounded-xl border border-[#d8e2ed] bg-white px-5 py-5 shadow-[0_10px_26px_rgba(10,35,64,0.12)]">
 							<Image
 								src="/logo-oficial.png"
 								alt="Club Atlético Argentino de Merlo"

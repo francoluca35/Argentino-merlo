@@ -151,7 +151,7 @@ export function ClubSection() {
 					<div className="flex flex-col gap-5">
 						<div className="relative overflow-hidden rounded-2xl shadow-[0_12px_40px_rgba(0,30,80,0.18)]">
 							<Image
-								src="/cancha.png"
+								src="/hero.jpg"
 								alt="Estadio Juan Carlos Brieva – Club Atlético Argentino de Merlo"
 								width={700}
 								height={400}
@@ -177,41 +177,35 @@ export function ClubSection() {
 							</div>
 						</div>
 
-						<div className="relative w-full max-w-[560px] self-start overflow-hidden rounded-2xl bg-white shadow-[0_8px_30px_rgba(0,30,80,0.14)]">
-							<div className="grid grid-cols-1 md:grid-cols-[1.05fr_1.25fr]">
-								<div className="relative z-10 px-6 py-7 md:px-7">
-									<span
-										className="font-display block text-[3.1rem] leading-none text-celeste"
-										aria-hidden
-									>
-										&ldquo;
-									</span>
-									<blockquote className="-mt-6 text-[1.02rem] font-medium leading-relaxed text-[#224163]">
-										No es solo fútbol.
-										<br />
-										Es el lugar donde crecimos,
-										<br />
-										donde hacemos amigos, y vamos a alentar.
-										<br />
-									
-									</blockquote>
-								</div>
-								<div className="relative min-h-[170px]">
-									<Image
-										src="/hinchada.png"
-										alt="Hinchada del Club Atlético Argentino de Merlo"
-										fill
-										className="object-cover"
-									/>
-									<div
-										className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.7)_18%,rgba(255,255,255,0.08)_45%,rgba(255,255,255,0)_62%)]"
-										aria-hidden
-									/>
-									<div
-										className="pointer-events-none absolute inset-0 bg-[linear-gradient(125deg,rgba(0,174,239,0.2)_0%,rgba(0,174,239,0.34)_100%)]"
-										aria-hidden
-									/>
-								</div>
+						<div className="relative overflow-hidden rounded-2xl shadow-[0_8px_30px_rgba(0,30,80,0.14)]">
+							<Image
+								src="https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=1400&q=80"
+								alt=""
+								fill
+								className="object-cover opacity-30"
+								aria-hidden
+							/>
+							<div
+								className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,174,239,0.55)_0%,rgba(10,30,80,0.75)_100%)]"
+								aria-hidden
+							/>
+							<div className="relative z-[1] flex items-start gap-5 px-7 py-7">
+								<span
+									className="font-display shrink-0 text-[4rem] leading-none text-[#00AEEF] opacity-80"
+									aria-hidden
+								>
+									&quot;
+								</span>
+								<blockquote className="text-[1.02rem] font-medium leading-relaxed text-white">
+									No es solo fútbol.
+									<br />
+									Es el lugar donde crecimos,
+									<br />
+									donde hacemos amigos,
+									<br />
+									donde llevamos nuestros sueños
+									<br />y los compartimos.
+								</blockquote>
 							</div>
 						</div>
 					</div>

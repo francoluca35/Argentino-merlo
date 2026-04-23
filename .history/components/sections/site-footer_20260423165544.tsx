@@ -77,7 +77,7 @@ export function Footer() {
 					</div>
 
 					<div className="flex items-start lg:justify-end">
-						<div className="flex items-center gap-4 rounded-xl px-5 py-5 ">
+						<div className="flex items-center gap-4 rounded-xl  px-5 py-5 shadow-[0_10px_26px_rgba(10,35,64,0.12)]">
 							<Image
 								src="/logo-oficial.png"
 								alt="Club Atlético Argentino de Merlo"
