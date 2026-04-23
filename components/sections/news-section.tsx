@@ -9,7 +9,7 @@ export function NewsSection() {
 		<section
 			id="noticias"
 			aria-labelledby="noticias-heading"
-			className="scroll-mt-[72px] px-8 py-16 md:px-12 lg:px-20 lg:py-20"
+			className="scroll-mt-[120px] px-8 py-16 md:px-12 lg:px-20 lg:py-20"
 		>
 			<Reveal>
 				<p className="font-heading mb-2 text-[0.75rem] font-bold uppercase tracking-[0.22em] text-celeste">
